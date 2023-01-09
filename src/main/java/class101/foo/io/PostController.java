@@ -38,7 +38,7 @@ public class PostController {
     // 2 글 목록을 페이징하여 반환
     @GetMapping("/posts")
     public Page<Post> getPostList(@RequestParam(defaultValue = "1") Integer page) {
-        if (page.equals(1)) {
+        if(page.equals(1)) {
             return postCacheService.getFirstPostPage();
         } else {
             return postRepository.findAll(

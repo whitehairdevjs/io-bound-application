@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PostCacheService {
+
     @Autowired
     PostRepository postRepository;
 
@@ -24,4 +25,5 @@ public class PostCacheService {
     public Page<Post> getFirstPostPage() {
         return this.firstPostPage;
     }
+
 }
